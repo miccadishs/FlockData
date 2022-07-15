@@ -1,0 +1,105 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/dashboard.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <title>{% block title %}{% endblock title %}</title>
+
+    <!-- datatables -->
+    <link rel="stylesheet" href="{% static 'assets/datatables/dataTables.bootstrap4.css' %}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap"
+          rel="stylesheet">
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+{#    <link rel="stylesheet" href="font/font/flaticon.css">#}
+</head>
+
+
+<body>
+
+
+<div id="wrapper">
+    <div class="overlay"></div>
+
+    <!-- Sidebar -->
+    {% include 'components/sidebar.html' %}
+    <!-- /#sidebar-wrapper -->
+
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+
+        <div id="content">
+
+            <div class="container-fluid p-0 px-lg-0 px-md-0">
+
+
+                <!-- Topbar -->
+                {% include 'components/topbar.html' %}
+                <!-- End of Topbar -->
+
+
+                <!-- Begin Page Content -->
+                {% block content %}
+
+                {% endblock content %}
+                <!-- /.container-fluid -->
+
+            </div>
+
+
+            {% include 'components/footer.html' %}
+
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+<script src="{% static 'assets/bootstrap/js/jquery-3.3.1.slim.min.js' %}"></script>
+<script src="{% static 'assets/bootstrap/js/jquery-3.5.1.js' %}"></script>
+<script src="{% static 'assets/bootstrap/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/datatables/dataTables.bootstrap4.min.js' %}"></script>
+<script src="{% static 'assets/datatables/dataTables.bootstrap4.min.js' %}"></script>
+
+<script>
+
+    $('#bar').click(function () {
+        $(this).toggleClass('open');
+        $('#page-content-wrapper ,#sidebar-wrapper').toggleClass('toggled');
+
+    });
+</script>
+
+<script>
+    $('.mydatatable').DataTable()
+    {
+    }
+</script>
+
+{% block scripts %}
+
+{% endblock scripts %}
+
+
+</body>
+</html>

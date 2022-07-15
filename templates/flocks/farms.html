@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+     <div class="container-fluid px-lg-4">
+        <div class="row">
+            this is where the records will be rendered
+        </div>
+     </div>
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+
+        let elem = document.getElementById('farms')
+        elem.classList.add('active')
+    </script>
+{% endblock scripts %}
