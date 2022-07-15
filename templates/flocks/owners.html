@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+     <div class="container-fluid active active px-lg-4">
+        <div class="row">
+            this is where the owners will be rendered
+        </div>
+     </div>
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+
+        let elem = document.getElementById('owners')
+        elem.classList.add('active')
+    </script>
+{% endblock scripts %}
